@@ -1,22 +1,22 @@
 import classes from './header.module.scss';
 import Logo from '../../assets/logo.png';
 
-function Header() {
+const Header = () => {
   return (
     <>
-      <header class={classes.headerStyle}>
-        <div style={{display: 'flex'}}>
-          <a href='/'>
-            <img src={Logo} class={classes.headerLogo}/>
+      <header className={classes.headerStyle}>
+        <div className={classes.logoContainer}>
+          <a href='/' style={{borderRadius: '50%'}}>
+            <img src={Logo} className={classes.headerLogo} alt="zomBnB logo"/>
           </a>
-          <span class={classes.logoFont}>ZomBnB</span>
+          <span className={classes.logoFont}>ZomBnB</span>
         </div>
-        <div id='nav-links' class={classes.navLinks}>
-          <a href='#'>About</a>
-          <a href='#'>Services</a>
-          <a href='#'>Listings</a>
-          <a href='login'>Sign In</a>
-          <a href='#'>Register</a>
+        <div id='nav-links' className={classes.navLinks}>
+          <a href='#about' className={classes.navLink}>About</a>
+          <a href='#services' className={classes.navLink}>Services</a>
+          <a href='destinations' className={classes.navLink}>Properties</a>
+          <a href='login' className={classes.navLink}>Sign In</a>
+          <a href='new-account' className={classes.headerCTA}>Get Started</a>
         </div>
         <div>
 

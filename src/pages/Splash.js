@@ -1,9 +1,7 @@
-import Header from "../components/header/Header.js";
 
-function Splash() {
+const Splash = () => {
   return (
     <>
-      <Header />
       <div>This is the home page</div>
     </>
   );
