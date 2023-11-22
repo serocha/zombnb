@@ -1,0 +1,32 @@
+.headerStyle {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  padding: 16px;
+}
+
+.headerLogo {
+  height: 128px;
+  width: 128px;
+  transition: height 1s, width 1s;
+}
+
+.logoFont {
+  font-family: 'Gloria Hallelujah';
+  font-size: 32px;
+  vertical-align: middle;
+  font-weight: bold;
+}
+
+.headerLogo:hover {
+  height: 138px;
+  width: 138px;
+}
+
+.navLinks {
+  align-self: flex-end;
+}
+
+.navLinks a {
+  padding: 16px;
+}
