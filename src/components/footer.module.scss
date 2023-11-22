@@ -1,0 +1,33 @@
+$unit: 16px;
+
+.footerWrapper {
+  display: flex;
+  justify-content: space-between;
+  bottom: 0;
+  width: 100%;
+  background-color: #442c64;
+}
+
+.footerNav {
+  padding: 4*$unit;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  color: white;
+
+  .footerNavRight {
+    text-align: right;
+  }
+
+  .footerNavLeft {
+    text-align: left;
+  }
+}
+
+.githubLogo {
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+  background-color: white;
+  padding: 2px;
+}

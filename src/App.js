@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { GoogleOAuthProvider } from '@react-oauth/google';
-import Layout from './components/layout/Layout.js';
+import Layout from './components/Layout.js';
 import Splash from './pages/Splash.js';
 import Login from './pages/Login.js';
 import SignUp from './pages/SignUp.js';
