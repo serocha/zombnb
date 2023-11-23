@@ -17,3 +17,11 @@
     margin-bottom: 3*$unit;
   }
 }
+
+.glink {
+  color: blue;
+
+  &:hover {
+    color: rgb(94, 94, 255);
+  }
+}
