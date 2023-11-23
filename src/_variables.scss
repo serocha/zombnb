@@ -1,0 +1,9 @@
+$unit: 16px;
+$themeColor: #452c63;
+
+.unselectable {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}

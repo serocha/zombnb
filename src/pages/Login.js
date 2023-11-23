@@ -11,12 +11,20 @@ const Login = () => {
         <img src={Logo} className={classes.logo} alt='zomBnB logo' />
         <div className={classes.logoFont}>Welcome Back</div>
         <form className={classes.loginForm}>
-          <input type="text" placeholder='Email'/>
-          <input type="password" placeholder='Password' />
+          <input 
+            type='text'
+            placeholder='Email'
+            autoComplete='username'
+            required />
+          <input 
+            type='password' 
+            placeholder='Password' 
+            autoComplete='current-password'
+            required />
           <hr/>
           <button className={classes.signInBtn}>Sign In</button>
-          <div style={{textAlign: "center"}}>or</div>
-          <br></br>
+          <hr className={classes.separator}/>
+          <br />
           <div className={classes.googleLogin}>
           <GoogleLogin
             onSuccess={credentialResponse => {

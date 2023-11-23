@@ -1,4 +1,4 @@
-$unit: 16px;
+@import '../variables.scss';
 
 .loginBackground {
   width: 100%;
@@ -37,21 +37,21 @@ $unit: 16px;
   display: flex;
   flex-direction: column;
   padding: $unit 0;
-}
 
-.loginForm input {
-  height: 2.5em;
-  width: 20em;
-  font-size: medium;
-  margin-bottom: $unit;
-  padding-left: $unit;
-  outline: 3px solid white;
-  border: 1px solid black;
-  border-radius: 0.5*$unit;
-}
+  input {
+    height: 2.5em;
+    width: 20em;
+    font-size: medium;
+    margin-bottom: $unit;
+    padding-left: $unit;
+    outline: 3px solid white;
+    border: 1px solid black;
+    border-radius: 0.5*$unit;
+  }
 
-.loginForm input:focus {
-  outline: 3px solid #78589f;
+  input:focus {
+    outline: 3px solid #78589f;
+  }
 }
 
 .signInBtn {
@@ -60,19 +60,24 @@ $unit: 16px;
   font-size: medium;
   width: 200px;
   align-self: center;
-  background-color: #452c63;
+  background-color: $themeColor;
   color: white;
   font-weight: bold;
   border-radius: 0.5*$unit;
   border: 1px solid white;
   transition: background-color 0.2s, color 0.2s;
+
+  &:hover {
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+    cursor: pointer;
+  }  
 }
 
-.signInBtn:hover {
-  background-color: white;
-  color: black;
-  border: 1px solid black;
-  cursor: pointer;
+.separator {
+  width: 100%;
+  border: 1px solid lightgray;
 }
 
 .googleLogin {

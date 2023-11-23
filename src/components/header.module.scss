@@ -1,3 +1,5 @@
+@import '../variables.scss';
+
 .headerStyle {
   display: flex;
   flex-direction: row;
@@ -12,11 +14,11 @@
   transition: transform 0.7s;
   border-radius: 50%;
   margin-right: 16px;
-}
 
-.headerLogo:hover {
-  transform: scale(1.05);
-  transform-origin: center;
+  &:hover {
+    transform: scale(1.05);
+    transform-origin: center;
+  }
 }
 
 .logoContainer {
@@ -30,37 +32,38 @@
   font-weight: bold;
 }
 
+.navLink:hover {
+  background-color: white;
+  color: $themeColor;
+  border-bottom: 1px solid $themeColor;
+}
+
 .navLinks {
   display: flex;
   align-items: center;
   justify-content: flex-end;
   margin-left: auto;
-}
 
-.navLinks a {
-  width: 90px;
-  text-align: center;
-  padding: 12px 16px;
-  margin: 0 4px;
-  border: 1px solid white;
-  transition: background-color 0.2s, color 0.2s, border 0.2s;
-}
-
-.navLink:hover {
-  background-color: white;
-  color: #452c63;
-  border-bottom: 1px solid #452c63;
+  a {
+    width: 90px;
+    text-align: center;
+    padding: 12px 16px;
+    margin: 0 4px;
+    border: 1px solid white;
+    transition: background-color 0.2s, color 0.2s, border 0.2s;
+  }
 }
 
 .headerCTA {
-  background-color: #452c63;
+  background-color: $themeColor;
   color: white;
   border-radius: 8px;
-  border: 1px solid #452c63;
+  border: 1px solid $themeColor;
+
+  &:hover {
+    background-color: inherit;
+    color: inherit;
+    border: 1px solid black;
+  }
 }
 
-.headerCTA:hover {
-  background-color: inherit;
-  color: inherit;
-  border: 1px solid black;
-}

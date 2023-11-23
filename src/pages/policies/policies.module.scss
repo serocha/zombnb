@@ -1,0 +1,19 @@
+@import '../../variables.scss';
+
+
+.hrStyle {
+  display: flex;
+  align-items: center;
+  height: 6*$unit;
+  background-color: $themeColor;
+  color: white;
+  padding-left: 3*$unit;
+}
+
+.policyWrapper {
+  padding: 3*$unit 6*$unit;
+
+  p {
+    margin-bottom: 3*$unit;
+  }
+}

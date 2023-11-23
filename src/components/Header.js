@@ -4,12 +4,12 @@ import Logo from '../assets/logo.png';
 const Header = () => {
   return (
     <>
-      <header className={classes.headerStyle}>
+      <header id='#top' className={classes.headerStyle}>
         <div className={classes.logoContainer}>
           <a href='/' style={{borderRadius: '50%'}}>
             <img src={Logo} className={classes.headerLogo} alt="zomBnB logo"/>
           </a>
-          <span className={classes.logoFont}>ZomBnB</span>
+          <span className={classes.logoFont}>zomBnB</span>
         </div>
         <div id='nav-links' className={classes.navLinks}>
           <a href='#about' className={classes.navLink}>About</a>
