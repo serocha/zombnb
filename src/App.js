@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { GoogleOAuthProvider } from '@react-oauth/google';
 import Layout from './components/Layout.js';
-import Splash from './pages/Splash.js';
+import Landing from './pages/Landing.js';
 import Login from './pages/Login.js';
 import SignUp from './pages/SignUp.js';
 import Profile from './pages/Profile.js';
@@ -16,7 +16,7 @@ const App = () => {
       <BrowserRouter>
         <Routes>
           <Route path='/' element={ <Layout/> }>
-            <Route index element={ <Splash/> } />
+            <Route index element={ <Landing/> } />
             <Route path='profile' element={ <Profile/> } />
             <Route path='destinations' element={ <PropertyList/> } />
             <Route path='privacy-policy' element={ <Privacy/> } />

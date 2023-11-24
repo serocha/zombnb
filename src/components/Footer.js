@@ -69,16 +69,16 @@ const Footer = () => {
               />
             </div>
             <div className={classes.modalContent}>
+              <div className={classes.modalText}>
+                <p>On behalf of all of us here at zomBnB, we hope you enjoy your stay.</p>
+                <p><b>Thank you!</b></p>
+                <p>Jake Black & Shane Rocha</p>
+              </div>
               <div>
                 <img 
                   src={Thumb}
                   className={classes.modalImg}
                   alt='zombie thumbs up' />
-              </div>
-              <div className={classes.modalText}>
-                <p>On behalf of all of us here at zomBnB, we hope you enjoy your stay.</p>
-                <p><b>Thank you!</b></p>
-                <p>Jake Black & Shane Rocha</p>
               </div>
             </div>
           </div>

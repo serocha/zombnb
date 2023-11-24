@@ -1,0 +1,31 @@
+
+
+.heroWrapper {
+  position: relative;
+  display: flex;
+  width: 100%;
+}
+
+.hero {
+  width: 200px; // Set your desired width
+  height: 200px; // Set your desired height
+  background-color: #f00; // Set your desired background color
+  
+  // Clipping the bottom right corner to create a triangle effect
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 30px)); // Adjust the calc value to control the cut-off size
+  
+  // Optional: add some border and shadows for styling
+  border: 1px solid #000;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.heroImg {
+  flex: 66%;
+  height: 80vh;
+  background-image: url('../assets/couple.png');
+  background-attachment: fixed;
+  background-position: right top;
+  background-size:60%;
+  background-repeat: no-repeat;
+  z-index: 1;
+}

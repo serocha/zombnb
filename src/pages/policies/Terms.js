@@ -33,7 +33,7 @@ const Terms = () => {
 
           <section>
             <h3>IV. Liability and Indemnity</h3>
-            <p>You understand and agree that zomBnB shall not be held liable for any injuries including, but not limited to, infections, transformations bites, scratches, curses, or building collapse as a result of your stay. 
+            <p>You understand and agree that zomBnB shall not be held liable for any injuries including, but not limited to, infections, transformations, bites, scratches, curses, or building collapse as a result of your stay. 
               You waive the right to hold us accountable for personal property damage and loss that occurs on our premises.</p>
           </section>
 
