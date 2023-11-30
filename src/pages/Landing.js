@@ -9,7 +9,6 @@ const Splash = () => {
           <div className={classes.hero}></div>
           <div className={classes.heroImg} />
         </div>
-
       </section>
       </main>
     </>
