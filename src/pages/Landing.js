@@ -1,12 +1,12 @@
 import classes from './landing.module.scss';
 
-const Splash = () => {
+const Landing = () => {
   return (
     <>
       <main>
       <section>
         <div className={classes.heroWrapper}>
-          <div className={classes.hero}></div>
+          {/* <div className={classes.hero}></div> */}
           <div className={classes.heroImg} />
         </div>
       </section>
@@ -15,4 +15,4 @@ const Splash = () => {
   );
 }
 
-export default Splash;
+export default Landing;

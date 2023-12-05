@@ -54,6 +54,10 @@
   }
 }
 
+.emailInput {
+  display: none;
+}
+
 .signInBtn {
   padding: 0.75*$unit 4*$unit;
   margin: $unit;
@@ -78,8 +82,4 @@
 .separator {
   width: 100%;
   border: 1px solid lightgray;
-}
-
-.googleLogin {
-  align-self: center;
 }
