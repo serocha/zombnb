@@ -1,5 +1,6 @@
 import classes from './policies.module.scss';
 
+/* Content for the privacy policy page */
 const Privacy = () => {
   return (
     <>
@@ -12,7 +13,7 @@ const Privacy = () => {
             <p>Last updated: November 23, 2023</p>
             <h3>Overview</h3>
             <p>
-              zomBnB ("us", "we", or "our") operates [https goes here] (the "Site"). This page informs you of our policies regarding the collection, use and disclosure of Personal Information we receive from users of the Site.
+              zomBnB ("us", "we", or "our") operates zombnb.serocha.com (the "Site"). This page informs you of our policies regarding the collection, use and disclosure of Personal Information we receive from users of the Site.
               We use your Personal Information only for providing and improving the Site. By using the Site, you agree to the collection and use of information in accordance with this policy.
             </p>
           </section>
@@ -22,7 +23,6 @@ const Privacy = () => {
             <p>
               While using our Site, we may ask you to provide us with certain personally identifiable information that can be used to identify you for authentication purposes. 
               Personally identifiable information may include, but is not limited to your email address and your computer's Internet Protocol ("IP") address ("Personal Information").
-              Additionally, we make use of third-party authentication services through Google. <a href='https://policies.google.com/privacy?hl=en-US' className={classes.glink}>Google's policy may be viewed here.</a>
             </p>
           </section>
 

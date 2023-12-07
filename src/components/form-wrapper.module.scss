@@ -1,0 +1,57 @@
+@import '../variables.scss';
+
+.background {
+  width: 100%;
+  min-height: 100vh;
+  background: rgb(33,21,47);
+  background: linear-gradient(180deg, rgba(33,21,47,1) 0%, rgba(69,44,99,1) 55%, rgba(111,79,148,1) 100%);
+  display: flex;
+  justify-content: center;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 520px;
+  min-width: 320px;
+  background-color: white;
+  margin: 2*$unit;
+  padding-top: 2*$unit;
+  border-radius: 2*$unit;
+  box-shadow: 2px 2px 10px 0px #301f45;
+}
+
+.logo {
+  height: 6*$unit;
+  width: 6*$unit;
+}
+
+.backBtnWrapper {
+  width: 100%;
+  margin-bottom: 2*$unit;
+}
+
+.backBtn {
+  margin-left: 2*$unit;
+  color: $themeColor;
+  font: inherit;
+  background: none;
+  border: none;
+  transition: transform 1s, color 0.3s;
+
+  &:hover {
+    color: crimson;
+    cursor: pointer;
+
+    .arrow {
+      margin-left: $unit;
+      margin-right: $unit;
+    }
+  }
+
+  .arrow {
+    margin-left: 2*$unit;
+    transition: margin 0.5s ease-in-out;
+  }
+}

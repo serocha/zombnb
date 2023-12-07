@@ -1,5 +1,6 @@
 import classes from './policies.module.scss';
 
+/* Content for the terms & conditions page */
 const Terms = () => {
   return (
     <>

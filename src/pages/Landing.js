@@ -1,5 +1,6 @@
 import classes from './landing.module.scss';
 
+/* landing page main body */
 const Landing = () => {
   return (
     <>

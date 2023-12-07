@@ -59,6 +59,20 @@
   padding: 2px;
 }
 
+.creditsBtn {
+  background: none;
+  color: white;
+  font: inherit;
+  border: none;
+  margin-left: 16px;
+  height: 32px;
+
+  &:hover {
+    color: lightgray;
+    cursor: pointer
+  }
+}
+
 .modal {
   display: flex;
   justify-content: center;
@@ -80,6 +94,11 @@
   overflow-y: hidden;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   border-radius: 4px;
+}
+
+.closeBtnWrapper {
+  border-radius: 8px;
+  background-color: red;
 }
 
 .closeBtn {

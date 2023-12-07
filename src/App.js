@@ -9,6 +9,10 @@ import Privacy from './pages/policies/Privacy.js';
 import Terms from './pages/policies/Terms.js';
 import './App.css';
 
+/*
+ * The root application function. Provides routing for the various pages.
+ */
+
 const App = () => {
   return (
     <BrowserRouter>
@@ -21,7 +25,7 @@ const App = () => {
           <Route path='terms-and-conditions' element={ <Terms/> } />
         </Route>
         <Route path='login' element={ <Login/> } />
-        <Route path='new-account' element={ <SignUp/> } />
+        <Route path='create-account' element={ <SignUp/> } />
       </Routes>
     </BrowserRouter>
   );

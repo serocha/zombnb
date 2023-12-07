@@ -3,6 +3,9 @@ import classes from './footer.module.scss';
 import Mark from '../assets/github-mark.svg';
 import Thumb from '../assets/thumbs-up.png';
 
+/*
+ * Reusable footer. Contains nav links and a credits modal.
+ */
 const Footer = () => {
 
   const [showCredits, setShowCredits] = useState(false);  // controls credits modal
@@ -35,12 +38,13 @@ const Footer = () => {
                   alt='zomBnB logo'
                 />
               </a>
-              <a 
-                style={{marginLeft: '16px', cursor: 'pointer'}}
+              <button
+                className={classes.creditsBtn}
                 onClick={openCredits}
+                href=''
               >
                   Credits
-              </a>
+              </button>
             </div>          
           </div>
         </div>
@@ -63,10 +67,12 @@ const Footer = () => {
             onClick={(e) => e.stopPropagation()}
           >
             <div className={classes.modalClose}>
-              <div 
-                className={classes.closeBtn}
-                onClick={closeCredits}
-              />
+              <div className={classes.closeBtnWrapper}>
+                <div 
+                  className={classes.closeBtn}
+                  onClick={closeCredits}
+                />
+              </div>
             </div>
             <div className={classes.modalContent}>
               <div className={classes.modalText}>
