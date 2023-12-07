@@ -13,9 +13,8 @@ const Header = () => {
           <span className={classes.logoFont}>zomBnB</span>
         </div>
         <div id='nav-links' className={classes.navLinks}>
-          <a href='/#about' className={classes.navLink}>About</a>
           <a href='/#services' className={classes.navLink}>Services</a>
-          <a href='destinations' className={classes.navLink}>Properties</a>
+          <a href='/#destinations' className={classes.navLink}>Properties</a>
           <a href='login' className={classes.navLink}>Sign In</a>
           <a href='create-account' className={classes.headerCTA}>Get Started</a>
         </div>

@@ -1,22 +1,73 @@
-
+@import '../variables';
 
 .heroWrapper {
   position: relative;
   display: flex;
   width: 100%;
+  max-width: 1920px;
 }
 
 .hero {
-  width: 200px; // Set your desired width
-  height: 200px; // Set your desired height
-  background-color: #f00; // Set your desired background color
-  
-  // Clipping the bottom right corner to create a triangle effect
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 30px)); // Adjust the calc value to control the cut-off size
-  
-  // Optional: add some border and shadows for styling
-  border: 1px solid #000;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  position: absolute;
+  color: rgb(74, 24, 74);
+  background-color: rgb(255, 232, 255);
+  box-shadow: -10px 10px 10px 5px gray;
+  top: 0;
+  left: 0;
+  width: 50%; /* Adjust width according to your design */
+  height: 100%; /* Adjust height according to your design */
+  clip-path: polygon(
+    0% 0%, /* Top left corner */
+    100% 0%, /* Top right corner */
+    100% 0%, /* Bottom right corner, indented slightly */
+    90% 100%, /* Bottom corner, meeting the image */
+    0% 100% /* Bottom left corner */
+  );
+
+  .heroTitle {
+    margin: 4*$unit 8*$unit 2*$unit;
+    letter-spacing: 0px;
+    line-height: 52px;
+    font-family: 'Gloria Hallelujah';
+    font-size: 52px;
+    font-weight: bold;
+    font-variant-caps: small-caps;
+  }
+
+  .heroText {
+    margin: 2*$unit 8*$unit;
+    font-size: 20px;
+    letter-spacing: 0px;
+    font-weight: bold;
+  }
+
+  .heroBtnWrapper {
+    display: flex;
+    padding: 3*$unit;
+    justify-content: center;
+  }
+
+  .heroBtn {
+    width: 150px;
+    text-align: center;
+    padding: 12px 16px;
+    margin: 0 4px;
+    border: 1px solid white;
+    background-color: $themeColor;
+    color: white;
+    border-radius: 8px;
+    border: 1px solid $themeColor;
+    transition: background-color 0.1s, color 0.1s, border 0.2s;
+    font: inherit;
+    font-size: 20px;
+
+    &:hover {
+      background-color: white;
+      color: black;
+      border: 1px solid $themeColor;
+      cursor: pointer;
+    }
+  }
 }
 
 .heroImg {
