@@ -19,7 +19,7 @@ const Login = () => {
     event.preventDefault();
 
     try {
-      const response = await fetch('https://zombnb.serocha.com/login', {
+      const response = await fetch('https://zombnb.serocha.com/verify-login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -49,7 +49,9 @@ const Login = () => {
         autoComplete='off'
         value={formData.username}
         onChange={(e) => setFormData({...formData, username: e.target.value})}
+        className={classes.loginInput}
         required />
+      <br/>
       <input
         className={classes.emailInput}
         type='email'
@@ -63,6 +65,7 @@ const Login = () => {
         autoComplete='off'
         value={formData.password}
         onChange={(e) => setFormData({...formData, password: e.target.value})}
+        className={classes.loginInput}
         required />
       <hr/>
       <button className={classes.signInBtn}>Sign In</button>

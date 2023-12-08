@@ -10,6 +10,7 @@
   display: flex;
   flex-direction: column;
   padding: $unit 0;
+  align-items: center;
 
   .pwError {
     color: red;
@@ -17,15 +18,42 @@
     visibility: visible;
   }
 
-  .pwValid {
+  .hide {
     visibility: hidden;
+  }
+
+  .show {
+    visibility: visible;
+  }
+
+  .warning {
+    color: red;
+    font-size: small;
+    margin-left: 0.25*$unit;
+  }
+
+  .inputWrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    div {
+      margin-left: 0.5*$unit;
+    }
+  }
+
+  .signupInput {
+    width: 25em;
+  }
+
+  .loginInput {
+    width: 18em;
   }
 
   input {
     height: 2.5em;
-    width: 20em;
     font-size: medium;
-    margin-bottom: $unit;
+    margin-bottom: 0.5*$unit;
     margin-top: 4px;
     padding-left: $unit;
     outline: 3px solid white;
