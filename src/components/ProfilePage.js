@@ -1,5 +1,8 @@
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import Header from './Header';
+import Footer from './Footer';
+import classes from './profile-page.module.scss';
 
 const ProfilePage = () => {
   const [willDisplay, setWillDisplay] = useState(false);
@@ -28,9 +31,20 @@ const ProfilePage = () => {
     }
   }, [navigate, setWillDisplay]);
 
+  const profile = () => {
+    return(
+      <div className={classes.main}>
+        <h2>Congratulations!</h2>
+        <p>You logged in.</p>
+      </div>
+    )
+  }
+
   return (
     <>
-      {!willDisplay ? <div>Loading...</div> : <div>Congratulations! You logged in!</div>}
+      <Header />
+      {!willDisplay ? <div>Loading...</div> : profile()}
+      <Footer />
     </>
   );
 };
