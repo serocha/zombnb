@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import FormWrapper from '../components/FormWrapper';
 import classes from './form.module.scss';
 
@@ -19,6 +20,8 @@ const SignUp = () => {
   const [unameErr, setUnameErr] = useState(false);
   const [passErr, setPassErr] = useState(false);
 
+  const navigate = useNavigate();
+
   // send request to the server
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -32,7 +35,14 @@ const SignUp = () => {
         body: JSON.stringify(formData), // Convert form data to JSON string
       });
 
-      if (!response.ok) {  // 200 range
+      if (response.ok) {  // 200 range
+        const data = await response.json();
+        if (data.token) {
+          sessionStorage.setItem('authToken', data.token);
+        } else {
+          console.error('Token not found in response data');
+        }
+      } else {
         const data = await response.json();
         setDB_Err(data.msg);
       }
@@ -78,7 +88,10 @@ const SignUp = () => {
   // check state updates in the useEffect hook, since state updates are asyncronous
   useEffect(() => {
     formData.password === verifyPassword ? setIsShown(false) : setIsShown(true);
-  }, [formData.password, verifyPassword]);
+    if (sessionStorage.getItem('authToken')) {
+      navigate('/profile')
+    }
+  }, [formData.password, verifyPassword, navigate]);
 
   // HTML rendered
   return (

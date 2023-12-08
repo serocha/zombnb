@@ -29,9 +29,14 @@ const Login = () => {
 
       if (response.ok) {  // 200 range
         const data = await response.json();
-        console.log(data);
+        if (data.token) {
+          sessionStorage.setItem('authToken', data.token);
+        } else {
+          console.error('Token not found in response data');
+        }
+      } else {
+        console.error('Server returned an error:', response.status);
       }
-
     } catch (error) {
       console.error('Error occurred while submitting form:', error);
     }
