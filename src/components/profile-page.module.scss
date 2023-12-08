@@ -4,3 +4,24 @@
   padding: 4*$unit;
   height: 50vh;
 }
+
+.logout {
+  font-size: inherit;
+  text-align: center;
+  padding: 12px 16px;
+  margin: 0 4px;
+  border: 1px solid white;
+  transition: background-color 0.2s, color 0.2s, border 0.2s;
+  background-color: $themeColor;
+  color: white;
+  border-radius: 8px;
+  border: 1px solid $themeColor;
+  width: 120px;
+
+  &:hover {
+    background-color: inherit;
+    color: inherit;
+    border: 1px solid black;
+    cursor: pointer;
+  }
+}

@@ -1,4 +1,5 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import FormWrapper from '../components/FormWrapper';
 import classes from './form.module.scss';
 
@@ -13,6 +14,8 @@ const Login = () => {
     email: '',
     password: ''
   });  
+
+  const navigate = useNavigate();
 
   // send request to the server
   const handleSubmit = async (event) => {
@@ -31,6 +34,7 @@ const Login = () => {
         const data = await response.json();
         if (data.token) {
           sessionStorage.setItem('authToken', data.token);
+          navigate('/profile')
         } else {
           console.error('Token not found in response data');
         }
@@ -41,6 +45,12 @@ const Login = () => {
       console.error('Error occurred while submitting form:', error);
     }
   };
+
+  useEffect(() => {
+    if (sessionStorage.getItem('authToken')) {
+      navigate('/profile')
+    }
+  })
 
   // HTML rendered
   return (

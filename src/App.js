@@ -14,8 +14,9 @@ import './App.css';
 
 const App = () => {
   return (
-    <BrowserRouter>
-      <Routes>
+    <>
+      <BrowserRouter>
+        <Routes>
         <Route path='/' element={ <Layout/> }>
           <Route index element={ <Landing/> } />
           <Route path='privacy-policy' element={ <Privacy/> } />
@@ -27,6 +28,7 @@ const App = () => {
         
       </Routes>
     </BrowserRouter>
+    </>
   );
 }
 

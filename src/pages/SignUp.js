@@ -39,6 +39,7 @@ const SignUp = () => {
         const data = await response.json();
         if (data.token) {
           sessionStorage.setItem('authToken', data.token);
+          navigate('/profile')
         } else {
           console.error('Token not found in response data');
         }

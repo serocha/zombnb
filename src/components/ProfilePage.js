@@ -8,6 +8,11 @@ const ProfilePage = () => {
   const [willDisplay, setWillDisplay] = useState(false);
   const navigate = useNavigate();
 
+  const logout = () => {
+    sessionStorage.removeItem('authToken');
+    navigate('/login');
+  }
+
   useEffect(() => {
     const authToken = sessionStorage.getItem('authToken');
 
@@ -36,6 +41,9 @@ const ProfilePage = () => {
       <div className={classes.main}>
         <h2>Congratulations!</h2>
         <p>You logged in.</p>
+        <br/>
+        <br/>
+        <button className={classes.logout} onClick={logout}>Log Out</button>
       </div>
     )
   }
