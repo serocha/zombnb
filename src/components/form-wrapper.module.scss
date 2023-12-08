@@ -30,10 +30,11 @@
 .backBtnWrapper {
   width: 100%;
   margin-bottom: 2*$unit;
+  display: flex;
+  justify-content: space-between;
 }
 
-.backBtn {
-  margin-left: 2*$unit;
+.link {
   color: $themeColor;
   font: inherit;
   background: none;
@@ -43,7 +44,13 @@
   &:hover {
     color: crimson;
     cursor: pointer;
+  }
+}
 
+.backBtn {
+  margin-left: 2*$unit;
+
+  &:hover {
     .arrow {
       margin-left: $unit;
       margin-right: $unit;
@@ -54,4 +61,8 @@
     margin-left: 2*$unit;
     transition: margin 0.5s ease-in-out;
   }
+}
+
+.signInBtn {
+  margin-right: 3*$unit;
 }

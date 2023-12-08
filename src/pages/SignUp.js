@@ -88,10 +88,10 @@ const SignUp = () => {
 
   // check state updates in the useEffect hook, since state updates are asyncronous
   useEffect(() => {
-    formData.password === verifyPassword ? setIsShown(false) : setIsShown(true);
     if (sessionStorage.getItem('authToken')) {
       navigate('/profile')
     }
+    formData.password === verifyPassword ? setIsShown(false) : setIsShown(true);
   }, [formData.password, verifyPassword, navigate]);
 
   // HTML rendered
@@ -149,7 +149,7 @@ const SignUp = () => {
         <div className={[classes.warning, (isShown ? classes.show : classes.hide)].join(' ')}>Passwords do not match</div>
       </div>
       <hr/>
-      <button className={classes.signInBtn}>Sign In</button>
+      <button className={classes.signInBtn}>Sign Up</button>
       {db_Err && <div style={{ color: 'red', textAlign: 'center' }}>{db_Err}</div>}
       <br/>
       <hr className={classes.separator}/>
